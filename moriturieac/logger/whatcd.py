@@ -239,6 +239,7 @@ class WhatCDLogger(result.Logger):
                         trackResult.ARCRC, trackResult.ARDBCRC))
         else:
             lines.append('     Track not present in AccurateRip database')
+            self._accuratelyRipped += 1
 
         if trackResult.testcrc == trackResult.copycrc:
             lines.append('     Copy OK')
